@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE37EDF526C9689700A63034 /* javalauncher_api.c in Sources */ = {isa = PBXBuildFile; fileRef = AE37EDF426C9689700A63034 /* javalauncher_api.c */; };
+		AE37EE1326CAF0CB00A63034 /* libdt_socket.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C94726C82E41005316DD /* libdt_socket.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1426CAF0CB00A63034 /* libinstrument.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C95226C82E41005316DD /* libinstrument.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1526CAF0CB00A63034 /* libj2gss.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C94326C82E41005316DD /* libj2gss.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1626CAF0CB00A63034 /* libj2pcsc.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C93D26C82E41005316DD /* libj2pcsc.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1726CAF0CB00A63034 /* libj2pkcs11.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C94926C82E41005316DD /* libj2pkcs11.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1826CAF0CB00A63034 /* libjava.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C93326C82DEB005316DD /* libjava.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1926CAF0CB00A63034 /* libjdwp.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C93E26C82E41005316DD /* libjdwp.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1A26CAF0CB00A63034 /* libjsig.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C94626C82E41005316DD /* libjsig.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1B26CAF0CB00A63034 /* libmanagement.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C94C26C82E41005316DD /* libmanagement.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1C26CAF0CB00A63034 /* libnet.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C94426C82E41005316DD /* libnet.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1D26CAF0CB00A63034 /* libnio.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C93B26C82E41005316DD /* libnio.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1E26CAF0CB00A63034 /* libverify.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C95026C82E41005316DD /* libverify.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE1F26CAF0CB00A63034 /* libzip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C94F26C82E41005316DD /* libzip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE2A26CAF0CC00A63034 /* libjaas.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2126CAF0CC00A63034 /* libjaas.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE2B26CAF0CC00A63034 /* libprefs.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2226CAF0CC00A63034 /* libprefs.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE2C26CAF0CC00A63034 /* libmanagement_ext.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2326CAF0CC00A63034 /* libmanagement_ext.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE2D26CAF0CC00A63034 /* librmi.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2426CAF0CC00A63034 /* librmi.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE2E26CAF0CC00A63034 /* libjli.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2526CAF0CC00A63034 /* libjli.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE2F26CAF0CC00A63034 /* libextnet.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2626CAF0CC00A63034 /* libextnet.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE3026CAF0CC00A63034 /* libmanagement_agent.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2726CAF0CC00A63034 /* libmanagement_agent.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE3226CAF0CC00A63034 /* libsyslookup.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2926CAF0CC00A63034 /* libsyslookup.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE3626CAF11800A63034 /* libjsig.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = AE37EE3426CAF11800A63034 /* libjsig.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE3726CAF11800A63034 /* libjvm.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = AE37EE3526CAF11800A63034 /* libjvm.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE3826CAF20700A63034 /* libjimage.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AE37EE2826CAF0CC00A63034 /* libjimage.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AE37EE3A26CB978C00A63034 /* conf in Resources */ = {isa = PBXBuildFile; fileRef = AE37EE3926CB978C00A63034 /* conf */; };
 		AEE6C90D26C82413005316DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C90C26C82413005316DD /* AppDelegate.m */; };
 		AEE6C91026C82413005316DD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C90F26C82413005316DD /* SceneDelegate.m */; };
 		AEE6C91326C82413005316DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C91226C82413005316DD /* ViewController.m */; };
@@ -14,9 +40,76 @@
 		AEE6C91826C82415005316DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE6C91726C82415005316DD /* Assets.xcassets */; };
 		AEE6C91B26C82415005316DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE6C91926C82415005316DD /* LaunchScreen.storyboard */; };
 		AEE6C91E26C82415005316DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE6C91D26C82415005316DD /* main.m */; };
+		AEE6C92826C82813005316DD /* lib in Resources */ = {isa = PBXBuildFile; fileRef = AEE6C92726C82812005316DD /* lib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AE37EE2026CAF0CC00A63034 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = lib;
+			dstSubfolderSpec = 7;
+			files = (
+				AE37EE3826CAF20700A63034 /* libjimage.dylib in Embed Libraries */,
+				AE37EE1726CAF0CB00A63034 /* libj2pkcs11.dylib in Embed Libraries */,
+				AE37EE1326CAF0CB00A63034 /* libdt_socket.dylib in Embed Libraries */,
+				AE37EE1D26CAF0CB00A63034 /* libnio.dylib in Embed Libraries */,
+				AE37EE1626CAF0CB00A63034 /* libj2pcsc.dylib in Embed Libraries */,
+				AE37EE1B26CAF0CB00A63034 /* libmanagement.dylib in Embed Libraries */,
+				AE37EE1A26CAF0CB00A63034 /* libjsig.dylib in Embed Libraries */,
+				AE37EE1526CAF0CB00A63034 /* libj2gss.dylib in Embed Libraries */,
+				AE37EE2A26CAF0CC00A63034 /* libjaas.dylib in Embed Libraries */,
+				AE37EE1826CAF0CB00A63034 /* libjava.dylib in Embed Libraries */,
+				AE37EE3026CAF0CC00A63034 /* libmanagement_agent.dylib in Embed Libraries */,
+				AE37EE1426CAF0CB00A63034 /* libinstrument.dylib in Embed Libraries */,
+				AE37EE2F26CAF0CC00A63034 /* libextnet.dylib in Embed Libraries */,
+				AE37EE1E26CAF0CB00A63034 /* libverify.dylib in Embed Libraries */,
+				AE37EE1C26CAF0CB00A63034 /* libnet.dylib in Embed Libraries */,
+				AE37EE1926CAF0CB00A63034 /* libjdwp.dylib in Embed Libraries */,
+				AE37EE3226CAF0CC00A63034 /* libsyslookup.dylib in Embed Libraries */,
+				AE37EE2C26CAF0CC00A63034 /* libmanagement_ext.dylib in Embed Libraries */,
+				AE37EE2B26CAF0CC00A63034 /* libprefs.dylib in Embed Libraries */,
+				AE37EE1F26CAF0CB00A63034 /* libzip.dylib in Embed Libraries */,
+				AE37EE2E26CAF0CC00A63034 /* libjli.dylib in Embed Libraries */,
+				AE37EE2D26CAF0CC00A63034 /* librmi.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE37EE3326CAF0FC00A63034 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = lib/server;
+			dstSubfolderSpec = 7;
+			files = (
+				AE37EE3626CAF11800A63034 /* libjsig.dylib in CopyFiles */,
+				AE37EE3726CAF11800A63034 /* libjvm.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AE37EDE426C9668F00A63034 /* frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = frameworks; path = mirai/frameworks; sourceTree = "<group>"; };
+		AE37EDE526C9669C00A63034 /* JavaLauncher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaLauncher.framework; path = mirai/frameworks/JavaLauncher/JavaLauncher.framework; sourceTree = "<group>"; };
+		AE37EDEA26C966DC00A63034 /* javalauncher_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = javalauncher_api.h; path = frameworks/JavaLauncher/JavaLauncher.framework/Headers/javalauncher_api.h; sourceTree = "<group>"; };
+		AE37EDEF26C9682C00A63034 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		AE37EDF126C9683C00A63034 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		AE37EDF226C9683C00A63034 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		AE37EDF426C9689700A63034 /* javalauncher_api.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = javalauncher_api.c; sourceTree = "<group>"; wrapsLines = 0; };
+		AE37EE0A26C9696300A63034 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		AE37EE2126CAF0CC00A63034 /* libjaas.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjaas.dylib; path = mirai/lib/libjaas.dylib; sourceTree = "<group>"; };
+		AE37EE2226CAF0CC00A63034 /* libprefs.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprefs.dylib; path = mirai/lib/libprefs.dylib; sourceTree = "<group>"; };
+		AE37EE2326CAF0CC00A63034 /* libmanagement_ext.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmanagement_ext.dylib; path = mirai/lib/libmanagement_ext.dylib; sourceTree = "<group>"; };
+		AE37EE2426CAF0CC00A63034 /* librmi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librmi.dylib; path = mirai/lib/librmi.dylib; sourceTree = "<group>"; };
+		AE37EE2526CAF0CC00A63034 /* libjli.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjli.dylib; path = mirai/lib/libjli.dylib; sourceTree = "<group>"; };
+		AE37EE2626CAF0CC00A63034 /* libextnet.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libextnet.dylib; path = mirai/lib/libextnet.dylib; sourceTree = "<group>"; };
+		AE37EE2726CAF0CC00A63034 /* libmanagement_agent.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmanagement_agent.dylib; path = mirai/lib/libmanagement_agent.dylib; sourceTree = "<group>"; };
+		AE37EE2826CAF0CC00A63034 /* libjimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjimage.dylib; path = mirai/lib/libjimage.dylib; sourceTree = "<group>"; };
+		AE37EE2926CAF0CC00A63034 /* libsyslookup.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsyslookup.dylib; path = mirai/lib/libsyslookup.dylib; sourceTree = "<group>"; };
+		AE37EE3426CAF11800A63034 /* libjsig.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjsig.dylib; path = mirai/lib/server/libjsig.dylib; sourceTree = "<group>"; };
+		AE37EE3526CAF11800A63034 /* libjvm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjvm.dylib; path = mirai/lib/server/libjvm.dylib; sourceTree = "<group>"; };
+		AE37EE3926CB978C00A63034 /* conf */ = {isa = PBXFileReference; lastKnownFileType = folder; name = conf; path = mirai/conf; sourceTree = "<group>"; };
 		AEE6C90826C82413005316DD /* mirai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mirai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE6C90B26C82413005316DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AEE6C90C26C82413005316DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,24 +122,35 @@
 		AEE6C91A26C82415005316DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEE6C91C26C82415005316DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEE6C91D26C82415005316DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AEE6C92726C82812005316DD /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		AEE6C92926C82CC7005316DD /* mirai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mirai.entitlements; sourceTree = "<group>"; };
+		AEE6C92B26C82CDE005316DD /* mirai */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mirai; sourceTree = "<group>"; };
+		AEE6C93026C82D1B005316DD /* libjvm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjvm.dylib; path = mirai/lib/server/libjvm.dylib; sourceTree = "<group>"; };
+		AEE6C93326C82DEB005316DD /* libjava.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjava.dylib; path = mirai/lib/libjava.dylib; sourceTree = "<group>"; };
+		AEE6C93B26C82E41005316DD /* libnio.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libnio.dylib; path = mirai/lib/libnio.dylib; sourceTree = "<group>"; };
+		AEE6C93D26C82E41005316DD /* libj2pcsc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libj2pcsc.dylib; path = mirai/lib/libj2pcsc.dylib; sourceTree = "<group>"; };
+		AEE6C93E26C82E41005316DD /* libjdwp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjdwp.dylib; path = mirai/lib/libjdwp.dylib; sourceTree = "<group>"; };
+		AEE6C94326C82E41005316DD /* libj2gss.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libj2gss.dylib; path = mirai/lib/libj2gss.dylib; sourceTree = "<group>"; };
+		AEE6C94426C82E41005316DD /* libnet.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libnet.dylib; path = mirai/lib/libnet.dylib; sourceTree = "<group>"; };
+		AEE6C94626C82E41005316DD /* libjsig.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjsig.dylib; path = mirai/lib/libjsig.dylib; sourceTree = "<group>"; };
+		AEE6C94726C82E41005316DD /* libdt_socket.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdt_socket.dylib; path = mirai/lib/libdt_socket.dylib; sourceTree = "<group>"; };
+		AEE6C94926C82E41005316DD /* libj2pkcs11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libj2pkcs11.dylib; path = mirai/lib/libj2pkcs11.dylib; sourceTree = "<group>"; };
+		AEE6C94C26C82E41005316DD /* libmanagement.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmanagement.dylib; path = mirai/lib/libmanagement.dylib; sourceTree = "<group>"; };
+		AEE6C94F26C82E41005316DD /* libzip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzip.dylib; path = mirai/lib/libzip.dylib; sourceTree = "<group>"; };
+		AEE6C95026C82E41005316DD /* libverify.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libverify.dylib; path = mirai/lib/libverify.dylib; sourceTree = "<group>"; };
+		AEE6C95226C82E41005316DD /* libinstrument.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libinstrument.dylib; path = mirai/lib/libinstrument.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		AEE6C90526C82413005316DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		AEE6C8FF26C82413005316DD = {
 			isa = PBXGroup;
 			children = (
+				AE37EE3926CB978C00A63034 /* conf */,
+				AE37EE3426CAF11800A63034 /* libjsig.dylib */,
+				AE37EE3526CAF11800A63034 /* libjvm.dylib */,
 				AEE6C90A26C82413005316DD /* mirai */,
 				AEE6C90926C82413005316DD /* Products */,
+				AEE6C92A26C82CDE005316DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +165,60 @@
 		AEE6C90A26C82413005316DD /* mirai */ = {
 			isa = PBXGroup;
 			children = (
+				AEE6C92926C82CC7005316DD /* mirai.entitlements */,
 				AEE6C90B26C82413005316DD /* AppDelegate.h */,
 				AEE6C90C26C82413005316DD /* AppDelegate.m */,
 				AEE6C90E26C82413005316DD /* SceneDelegate.h */,
 				AEE6C90F26C82413005316DD /* SceneDelegate.m */,
 				AEE6C91126C82413005316DD /* ViewController.h */,
 				AEE6C91226C82413005316DD /* ViewController.m */,
+				AE37EDF426C9689700A63034 /* javalauncher_api.c */,
+				AE37EDEA26C966DC00A63034 /* javalauncher_api.h */,
 				AEE6C91426C82413005316DD /* Main.storyboard */,
+				AEE6C92726C82812005316DD /* lib */,
 				AEE6C91726C82415005316DD /* Assets.xcassets */,
 				AEE6C91926C82415005316DD /* LaunchScreen.storyboard */,
 				AEE6C91C26C82415005316DD /* Info.plist */,
 				AEE6C91D26C82415005316DD /* main.m */,
 			);
 			path = mirai;
+			sourceTree = "<group>";
+		};
+		AEE6C92A26C82CDE005316DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE37EE2626CAF0CC00A63034 /* libextnet.dylib */,
+				AE37EE2126CAF0CC00A63034 /* libjaas.dylib */,
+				AE37EE2826CAF0CC00A63034 /* libjimage.dylib */,
+				AE37EE2526CAF0CC00A63034 /* libjli.dylib */,
+				AE37EE2726CAF0CC00A63034 /* libmanagement_agent.dylib */,
+				AE37EE2326CAF0CC00A63034 /* libmanagement_ext.dylib */,
+				AE37EE2226CAF0CC00A63034 /* libprefs.dylib */,
+				AE37EE2426CAF0CC00A63034 /* librmi.dylib */,
+				AE37EE2926CAF0CC00A63034 /* libsyslookup.dylib */,
+				AE37EE0A26C9696300A63034 /* libc.tbd */,
+				AE37EDF126C9683C00A63034 /* libc++.1.tbd */,
+				AE37EDF226C9683C00A63034 /* libc++abi.tbd */,
+				AE37EDEF26C9682C00A63034 /* libc++.tbd */,
+				AE37EDE526C9669C00A63034 /* JavaLauncher.framework */,
+				AE37EDE426C9668F00A63034 /* frameworks */,
+				AEE6C94726C82E41005316DD /* libdt_socket.dylib */,
+				AEE6C95226C82E41005316DD /* libinstrument.dylib */,
+				AEE6C94326C82E41005316DD /* libj2gss.dylib */,
+				AEE6C93D26C82E41005316DD /* libj2pcsc.dylib */,
+				AEE6C94926C82E41005316DD /* libj2pkcs11.dylib */,
+				AEE6C93E26C82E41005316DD /* libjdwp.dylib */,
+				AEE6C94626C82E41005316DD /* libjsig.dylib */,
+				AEE6C94C26C82E41005316DD /* libmanagement.dylib */,
+				AEE6C94426C82E41005316DD /* libnet.dylib */,
+				AEE6C93B26C82E41005316DD /* libnio.dylib */,
+				AEE6C95026C82E41005316DD /* libverify.dylib */,
+				AEE6C94F26C82E41005316DD /* libzip.dylib */,
+				AEE6C93326C82DEB005316DD /* libjava.dylib */,
+				AEE6C93026C82D1B005316DD /* libjvm.dylib */,
+				AEE6C92B26C82CDE005316DD /* mirai */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,8 +229,9 @@
 			buildConfigurationList = AEE6C92126C82415005316DD /* Build configuration list for PBXNativeTarget "mirai" */;
 			buildPhases = (
 				AEE6C90426C82413005316DD /* Sources */,
-				AEE6C90526C82413005316DD /* Frameworks */,
 				AEE6C90626C82413005316DD /* Resources */,
+				AE37EE2026CAF0CC00A63034 /* Embed Libraries */,
+				AE37EE3326CAF0FC00A63034 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -132,8 +278,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE37EE3A26CB978C00A63034 /* conf in Resources */,
 				AEE6C91B26C82415005316DD /* LaunchScreen.storyboard in Resources */,
 				AEE6C91826C82415005316DD /* Assets.xcassets in Resources */,
+				AEE6C92826C82813005316DD /* lib in Resources */,
 				AEE6C91626C82413005316DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +296,7 @@
 				AEE6C91326C82413005316DD /* ViewController.m in Sources */,
 				AEE6C90D26C82413005316DD /* AppDelegate.m in Sources */,
 				AEE6C91E26C82415005316DD /* main.m in Sources */,
+				AE37EDF526C9689700A63034 /* javalauncher_api.c in Sources */,
 				AEE6C91026C82413005316DD /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,15 +440,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = mirai/mirai.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4D5C3TK5U4;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mirai/frameworks/JavaLauncher",
+				);
 				INFOPLIST_FILE = mirai/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mirai/lib",
+					"$(PROJECT_DIR)/mirai/lib/server",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = tech.kokona.mirai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,15 +473,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = mirai/mirai.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4D5C3TK5U4;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mirai/frameworks/JavaLauncher",
+				);
 				INFOPLIST_FILE = mirai/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mirai/lib",
+					"$(PROJECT_DIR)/mirai/lib/server",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = tech.kokona.mirai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
