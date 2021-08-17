@@ -249,7 +249,7 @@ static int loadJavaVM(const char *java_lib)
     char libjvmpath[PATH_MAX];
     int i;
     for (i = 0; jvmtypes[i] != NULL; ++i) {
-        int len = strlen(java_lib) + strlen(jvmtypes[i]) +
+        unsigned long len = strlen(java_lib) + strlen(jvmtypes[i]) +
                 strlen(JL_LIBJVM) + 3; // 3 for 2 '/' + '\0';
         if (len >= PATH_MAX) {
             jl_log(3, "JL", "javalauncher_api::loadJavaVM: "

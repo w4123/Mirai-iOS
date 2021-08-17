@@ -90,9 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AE37EDE426C9668F00A63034 /* frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = frameworks; path = mirai/frameworks; sourceTree = "<group>"; };
-		AE37EDE526C9669C00A63034 /* JavaLauncher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaLauncher.framework; path = mirai/frameworks/JavaLauncher/JavaLauncher.framework; sourceTree = "<group>"; };
-		AE37EDEA26C966DC00A63034 /* javalauncher_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = javalauncher_api.h; path = frameworks/JavaLauncher/JavaLauncher.framework/Headers/javalauncher_api.h; sourceTree = "<group>"; };
+		AE3406B026CC20AE0015B0FB /* javalauncher_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = javalauncher_api.h; sourceTree = "<group>"; };
 		AE37EDEF26C9682C00A63034 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AE37EDF126C9683C00A63034 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		AE37EDF226C9683C00A63034 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
@@ -173,7 +171,7 @@
 				AEE6C91126C82413005316DD /* ViewController.h */,
 				AEE6C91226C82413005316DD /* ViewController.m */,
 				AE37EDF426C9689700A63034 /* javalauncher_api.c */,
-				AE37EDEA26C966DC00A63034 /* javalauncher_api.h */,
+				AE3406B026CC20AE0015B0FB /* javalauncher_api.h */,
 				AEE6C91426C82413005316DD /* Main.storyboard */,
 				AEE6C92726C82812005316DD /* lib */,
 				AEE6C91726C82415005316DD /* Assets.xcassets */,
@@ -200,8 +198,6 @@
 				AE37EDF126C9683C00A63034 /* libc++.1.tbd */,
 				AE37EDF226C9683C00A63034 /* libc++abi.tbd */,
 				AE37EDEF26C9682C00A63034 /* libc++.tbd */,
-				AE37EDE526C9669C00A63034 /* JavaLauncher.framework */,
-				AE37EDE426C9668F00A63034 /* frameworks */,
 				AEE6C94726C82E41005316DD /* libdt_socket.dylib */,
 				AEE6C95226C82E41005316DD /* libinstrument.dylib */,
 				AEE6C94326C82E41005316DD /* libj2gss.dylib */,
@@ -438,6 +434,7 @@
 		AEE6C92226C82415005316DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = mirai/mirai.entitlements;
@@ -445,10 +442,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4D5C3TK5U4;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/mirai/frameworks/JavaLauncher",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = mirai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,17 +465,15 @@
 		AEE6C92326C82415005316DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = mirai/mirai.entitlements;
+				CODE_SIGN_ENTITLEMENTS = mirai/miraiRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4D5C3TK5U4;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/mirai/frameworks/JavaLauncher",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = mirai/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

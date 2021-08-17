@@ -22,6 +22,22 @@
 int stdin_pipefd[2];
 int stdout_pipefd[2];
 
+void startMirai(void) {
+    jl_initialize([[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib"] UTF8String]);
+    chdir([NSTemporaryDirectory() UTF8String]);
+    char buffer[1000];
+    buffer[0] = 0;
+    strcat(buffer, "-Djava.class.path=");
+    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-console-2.6.7.jar"] UTF8String]);
+    strcat(buffer, ":");
+    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-console-terminal-2.6.7.jar"] UTF8String]);
+    strcat(buffer, ":");
+    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-core-all-2.6.7.jar"] UTF8String]);
+    char* options[] = { "-Xmx256M", "-XX:-UseCompressedClassPointers", buffer };
+    jl_createJavaVM(options, 3, NULL, NULL);
+    jl_callJava("net/mamoe/mirai/console/terminal/MiraiConsoleTerminalLoader", "main", "([Ljava/lang/String;)V", NULL, 0, NULL, NULL);
+}
+
 -(void)keyboardWillShow:(NSNotification *)noti {
     CGRect keyboardSize = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     
@@ -37,6 +53,8 @@ int stdout_pipefd[2];
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"FF");
     
     [_mainText setText:@"Mirai iOS 正在启动中，请耐心等待\n"];
     
@@ -54,19 +72,7 @@ int stdout_pipefd[2];
     dup2(stdin_pipefd[0], fileno(stdin));
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        jl_initialize([[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib"] UTF8String]);
-        chdir([NSTemporaryDirectory() UTF8String]);
-        char buffer[1000];
-        buffer[0] = 0;
-        strcat(buffer, "-Djava.class.path=");
-        strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-console-2.6.7.jar"] UTF8String]);
-        strcat(buffer, ":");
-        strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-console-terminal-2.6.7.jar"] UTF8String]);
-        strcat(buffer, ":");
-        strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-core-all-2.6.7.jar"] UTF8String]);
-        char* options[] = { "-Xmx256M", "-XX:-UseCompressedClassPointers", buffer };
-        jl_createJavaVM(options, 3, NULL, NULL);
-        jl_callJava("net/mamoe/mirai/console/terminal/MiraiConsoleTerminalLoader", "main", "([Ljava/lang/String;)V", NULL, 0, NULL, NULL);
+        startMirai();
     });
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
@@ -100,6 +106,14 @@ int stdout_pipefd[2];
         write(stdin_pipefd[1], [[_enterText.text stringByAppendingString:@"\n"] UTF8String], [_enterText.text length] + 1);
         [_enterText setText:@""];
     }
+}
+
+
+- (IBAction)onRestartButtonClicked:(UIButton *)sender {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        jl_destroyJavaVM(NULL, NULL);
+        //startMirai();
+    });
 }
 
 
