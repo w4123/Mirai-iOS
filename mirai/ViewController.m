@@ -54,8 +54,6 @@ void startMirai(void) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"FF");
-    
     [_mainText setText:@"Mirai iOS 正在启动中，请耐心等待\n"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -106,14 +104,6 @@ void startMirai(void) {
         write(stdin_pipefd[1], [[_enterText.text stringByAppendingString:@"\n"] UTF8String], [_enterText.text length] + 1);
         [_enterText setText:@""];
     }
-}
-
-
-- (IBAction)onRestartButtonClicked:(UIButton *)sender {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        jl_destroyJavaVM(NULL, NULL);
-        //startMirai();
-    });
 }
 
 

@@ -100,7 +100,7 @@
         <!--关于-->
         <scene sceneID="bIB-k4-Obp">
             <objects>
-                <viewController id="aDi-A2-EnI" sceneMemberID="viewController">
+                <viewController id="aDi-A2-EnI" customClass="AboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q6h-1y-hQr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,6 +119,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nwc-Jg-w1Z">
                                 <rect key="frame" x="292" y="303" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onBackgroundSwitchValueChanged:" destination="aDi-A2-EnI" eventType="valueChanged" id="6fp-6k-KSZ"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="保持后台运行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSU-u3-K9F">
                                 <rect key="frame" x="60.999999999999993" y="307" width="116.33333333333331" height="23"/>
@@ -126,17 +129,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64J-Ek-FH7">
-                                <rect key="frame" x="168" y="394" width="78" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="快速重启"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F0O-0o-ONq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="smL-fB-Ybg" firstAttribute="top" secondItem="GR3-tj-uGY" secondAttribute="bottom" constant="33.329999999999998" id="0sM-cY-fMC"/>
-                            <constraint firstItem="64J-Ek-FH7" firstAttribute="top" secondItem="jSU-u3-K9F" secondAttribute="bottom" constant="64" id="1uv-bv-jyw"/>
                             <constraint firstItem="F0O-0o-ONq" firstAttribute="trailing" secondItem="nwc-Jg-w1Z" secondAttribute="trailing" constant="73" id="5hv-RL-MAl"/>
                             <constraint firstItem="GR3-tj-uGY" firstAttribute="centerX" secondItem="Q6h-1y-hQr" secondAttribute="centerX" id="87S-nr-0yM"/>
                             <constraint firstItem="GR3-tj-uGY" firstAttribute="top" secondItem="F0O-0o-ONq" secondAttribute="top" constant="61" id="9yg-dU-bOl"/>
@@ -144,7 +141,6 @@
                             <constraint firstItem="nwc-Jg-w1Z" firstAttribute="top" secondItem="smL-fB-Ybg" secondAttribute="bottom" constant="109.67" id="LJm-hO-czw"/>
                             <constraint firstItem="smL-fB-Ybg" firstAttribute="centerX" secondItem="Q6h-1y-hQr" secondAttribute="centerX" id="RCc-sB-f0Q"/>
                             <constraint firstItem="smL-fB-Ybg" firstAttribute="top" secondItem="GR3-tj-uGY" secondAttribute="bottom" constant="33.329999999999998" id="fx8-q6-IXK"/>
-                            <constraint firstItem="64J-Ek-FH7" firstAttribute="centerX" secondItem="Q6h-1y-hQr" secondAttribute="centerX" id="iEd-cM-qfu"/>
                             <constraint firstItem="jSU-u3-K9F" firstAttribute="top" secondItem="smL-fB-Ybg" secondAttribute="bottom" constant="113.67" id="il3-2Q-70N"/>
                         </constraints>
                     </view>

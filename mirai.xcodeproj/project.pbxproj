@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE3406B326CCED9E0015B0FB /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3406B226CCED9E0015B0FB /* AboutViewController.m */; };
+		AE3406B726CCF7190015B0FB /* music.mp3 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AE3406B626CCF7190015B0FB /* music.mp3 */; };
 		AE37EDF526C9689700A63034 /* javalauncher_api.c in Sources */ = {isa = PBXBuildFile; fileRef = AE37EDF426C9689700A63034 /* javalauncher_api.c */; };
 		AE37EE1326CAF0CB00A63034 /* libdt_socket.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C94726C82E41005316DD /* libdt_socket.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		AE37EE1426CAF0CB00A63034 /* libinstrument.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = AEE6C95226C82E41005316DD /* libinstrument.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -44,6 +46,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		AE3406B526CCF70B0015B0FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				AE3406B726CCF7190015B0FB /* music.mp3 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE37EE2026CAF0CC00A63034 /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,6 +103,9 @@
 
 /* Begin PBXFileReference section */
 		AE3406B026CC20AE0015B0FB /* javalauncher_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = javalauncher_api.h; sourceTree = "<group>"; };
+		AE3406B226CCED9E0015B0FB /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		AE3406B426CCEDC00015B0FB /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		AE3406B626CCF7190015B0FB /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = mirai/music.mp3; sourceTree = "<group>"; };
 		AE37EDEF26C9682C00A63034 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AE37EDF126C9683C00A63034 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		AE37EDF226C9683C00A63034 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
@@ -143,6 +158,7 @@
 		AEE6C8FF26C82413005316DD = {
 			isa = PBXGroup;
 			children = (
+				AE3406B626CCF7190015B0FB /* music.mp3 */,
 				AE37EE3926CB978C00A63034 /* conf */,
 				AE37EE3426CAF11800A63034 /* libjsig.dylib */,
 				AE37EE3526CAF11800A63034 /* libjvm.dylib */,
@@ -178,6 +194,8 @@
 				AEE6C91926C82415005316DD /* LaunchScreen.storyboard */,
 				AEE6C91C26C82415005316DD /* Info.plist */,
 				AEE6C91D26C82415005316DD /* main.m */,
+				AE3406B226CCED9E0015B0FB /* AboutViewController.m */,
+				AE3406B426CCEDC00015B0FB /* AboutViewController.h */,
 			);
 			path = mirai;
 			sourceTree = "<group>";
@@ -228,6 +246,7 @@
 				AEE6C90626C82413005316DD /* Resources */,
 				AE37EE2026CAF0CC00A63034 /* Embed Libraries */,
 				AE37EE3326CAF0FC00A63034 /* CopyFiles */,
+				AE3406B526CCF70B0015B0FB /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -289,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3406B326CCED9E0015B0FB /* AboutViewController.m in Sources */,
 				AEE6C91326C82413005316DD /* ViewController.m in Sources */,
 				AEE6C90D26C82413005316DD /* AppDelegate.m in Sources */,
 				AEE6C91E26C82415005316DD /* main.m in Sources */,
