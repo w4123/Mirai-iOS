@@ -2,8 +2,9 @@
 在iOS和iPadOS上运行Mirai（实验性）
 
 ### 设备要求
-1. iOS 13及以上
-2. 无需越狱
+1. iOS 9及以上
+2. arm64 架构 (iPhone 5S+)
+3. 无需越狱
 
 ### 关于此项目
 本项目中包含由溯洄为iOS修改编译的openjdk 17，修改版源码位于 https://github.com/w4123/jdk17

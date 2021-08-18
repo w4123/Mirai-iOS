@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2003, 2016, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2003, 2017, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -33,7 +33,8 @@
 #include "jni.h"
 
 enum {
-    JDWPTRANSPORT_VERSION_1_0 = 0x00010000
+    JDWPTRANSPORT_VERSION_1_0 = 0x00010000,
+    JDWPTRANSPORT_VERSION_1_1 = 0x00010001
 };
 
 #ifdef __cplusplus
@@ -95,6 +96,8 @@ typedef struct {
  * See: http://java.sun.com/j2se/1.5/docs/guide/jpda/jdwp-spec.html
  */
 
+#define JDWP_HEADER_SIZE 11
+
 enum {
     /*
      * If additional flags are added that apply to jdwpCmdPacket,
@@ -142,6 +145,13 @@ typedef jint (JNICALL *jdwpTransport_OnLoad_t)(JavaVM *jvm,
                                                jint version,
                                                jdwpTransportEnv** env);
 
+/*
+ * JDWP transport configuration from the agent.
+ */
+typedef struct jdwpTransportConfiguration {
+    /* Field added in JDWPTRANSPORT_VERSION_1_1: */
+    const char* allowed_peers;       /* Peers allowed for connection */
+} jdwpTransportConfiguration;
 
 
 /* Function Interface */
@@ -191,6 +201,9 @@ struct jdwpTransportNativeInterface_ {
     jdwpTransportError (JNICALL *GetLastError)(jdwpTransportEnv* env,
         char** error);
 
+    /*  12: SetTransportConfiguration added in JDWPTRANSPORT_VERSION_1_1 */
+    jdwpTransportError (JNICALL *SetTransportConfiguration)(jdwpTransportEnv* env,
+        jdwpTransportConfiguration *config);
 };
 
 
@@ -248,6 +261,10 @@ struct _jdwpTransportEnv {
         return functions->GetLastError(this, error);
     }
 
+    /*  SetTransportConfiguration added in JDWPTRANSPORT_VERSION_1_1 */
+    jdwpTransportError SetTransportConfiguration(jdwpTransportEnv* env,
+        return functions->SetTransportConfiguration(this, config);
+    }
 
 #endif /* __cplusplus */
 };
