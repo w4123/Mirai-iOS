@@ -29,8 +29,6 @@ AVAudioPlayer* player;
         [session setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
         if (@available(iOS 14.5, *)) {
             [session setPrefersNoInterruptionsFromSystemAlerts:YES error:nil];
-        } else {
-            
         }
         [session setActive:YES error:nil];
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"music" withExtension:@"mp3"] error:nil];
