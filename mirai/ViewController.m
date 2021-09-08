@@ -24,7 +24,7 @@ int stdout_pipefd[2];
 
 void startMirai(void) {
     jl_initialize([[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib"] UTF8String]);
-    chdir([NSTemporaryDirectory() UTF8String]);
+    chdir([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject UTF8String]);
     char buffer[1000];
     buffer[0] = 0;
     strcat(buffer, "-Djava.class.path=");
