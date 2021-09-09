@@ -28,11 +28,11 @@ void startMirai(void) {
     char buffer[1000];
     buffer[0] = 0;
     strcat(buffer, "-Djava.class.path=");
-    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-console-2.6.7.jar"] UTF8String]);
+    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-console-2.7.0.jar"] UTF8String]);
     strcat(buffer, ":");
-    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-console-terminal-2.6.7.jar"] UTF8String]);
+    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-console-terminal-2.7.0.jar"] UTF8String]);
     strcat(buffer, ":");
-    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-core-all-2.6.7.jar"] UTF8String]);
+    strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-core-all-2.7.0.jar"] UTF8String]);
     char* options[] = { "-Xmx256M", "-XX:-UseCompressedClassPointers", buffer };
     jl_createJavaVM(options, 3, NULL, NULL);
     jl_callJava("net/mamoe/mirai/console/terminal/MiraiConsoleTerminalLoader", "main", "([Ljava/lang/String;)V", NULL, 0, NULL, NULL);
