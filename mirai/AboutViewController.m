@@ -12,6 +12,7 @@
 
 @end
 
+bool AutoScroll = true;
 AVAudioPlayer* player;
 
 @implementation AboutViewController
@@ -47,6 +48,14 @@ AVAudioPlayer* player;
         player = nil;
         AVAudioSession* session = [AVAudioSession sharedInstance];
         [session setActive:NO error:nil];
+    }
+}
+
+- (IBAction)onAutoScrollSwitchValueChanged:(UISwitch *)sender {
+    if ([sender isOn]) {
+        AutoScroll = true;
+    } else {
+        AutoScroll = false;
     }
 }
 

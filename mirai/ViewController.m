@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "AboutViewController.h"
 #include "javalauncher_api.h"
 #include <stdio.h>
 #include <unistd.h>
@@ -16,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *enterText;
 
 @end
+
+extern bool AutoScroll;
 
 @implementation ViewController
 
@@ -82,7 +85,15 @@ void startMirai(void) {
             NSString* s = [NSString stringWithUTF8String:buf];
             dispatch_sync(dispatch_get_main_queue(), ^{
                 if (s) {
-                    [self->_mainText setText:[self->_mainText.text stringByAppendingString:s]];
+                    NSString* newText = [self->_mainText.text stringByAppendingString:s];
+                    if ([newText length] > 5000) {
+                        newText = [newText substringFromIndex:[newText length] - 5000];
+                    }
+                    [self->_mainText setText:newText];
+                    if (AutoScroll) {
+                        NSRange range = NSMakeRange([self->_mainText.text length] - 1, 0);
+                        [self->_mainText scrollRangeToVisible:range];
+                    }
                 }
             });
 

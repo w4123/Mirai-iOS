@@ -110,8 +110,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Suhui &amp; Mamoe Developers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smL-fB-Ybg">
-                                <rect key="frame" x="90" y="173" width="234" height="20.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V0.0.2 By Suhui &amp; Mamoe Developers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smL-fB-Ybg">
+                                <rect key="frame" x="64" y="173" width="286.33333333333331" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -128,6 +128,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自动滚动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mef-91-MUq">
+                                <rect key="frame" x="61.000000000000007" y="371" width="77.666666666666686" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bW6-rK-KcP">
+                                <rect key="frame" x="292" y="371" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onAutoScrollSwitchValueChanged:" destination="aDi-A2-EnI" eventType="valueChanged" id="NnC-Zy-6gI"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F0O-0o-ONq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -139,8 +151,12 @@
                             <constraint firstItem="jSU-u3-K9F" firstAttribute="leading" secondItem="F0O-0o-ONq" secondAttribute="leading" constant="61" id="JtY-3V-ppe"/>
                             <constraint firstItem="nwc-Jg-w1Z" firstAttribute="top" secondItem="smL-fB-Ybg" secondAttribute="bottom" constant="109.67" id="LJm-hO-czw"/>
                             <constraint firstItem="smL-fB-Ybg" firstAttribute="centerX" secondItem="Q6h-1y-hQr" secondAttribute="centerX" id="RCc-sB-f0Q"/>
+                            <constraint firstItem="mef-91-MUq" firstAttribute="leading" secondItem="F0O-0o-ONq" secondAttribute="leading" constant="61" id="SdF-rG-vY3"/>
+                            <constraint firstItem="mef-91-MUq" firstAttribute="top" secondItem="jSU-u3-K9F" secondAttribute="bottom" constant="41" id="chQ-2t-wFd"/>
+                            <constraint firstItem="F0O-0o-ONq" firstAttribute="trailing" secondItem="bW6-rK-KcP" secondAttribute="trailing" constant="73" id="f1a-Rs-b7H"/>
                             <constraint firstItem="smL-fB-Ybg" firstAttribute="top" secondItem="GR3-tj-uGY" secondAttribute="bottom" constant="33.329999999999998" id="fx8-q6-IXK"/>
                             <constraint firstItem="jSU-u3-K9F" firstAttribute="top" secondItem="smL-fB-Ybg" secondAttribute="bottom" constant="113.67" id="il3-2Q-70N"/>
+                            <constraint firstItem="bW6-rK-KcP" firstAttribute="top" secondItem="nwc-Jg-w1Z" secondAttribute="bottom" constant="37" id="tSf-bd-cdm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="关于" image="info.circle" catalog="system" id="RJw-1d-EwP"/>
