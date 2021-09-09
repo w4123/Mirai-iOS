@@ -35,7 +35,8 @@ void startMirai(void) {
     strcat(buffer, [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"lib/mirai-core-all-2.7.0.jar"] UTF8String]);
     char* options[] = { "-Xmx256M", "-XX:-UseCompressedClassPointers", buffer };
     jl_createJavaVM(options, 3, NULL, NULL);
-    jl_callJava("net/mamoe/mirai/console/terminal/MiraiConsoleTerminalLoader", "main", "([Ljava/lang/String;)V", NULL, 0, NULL, NULL);
+    char* miraiOptions[] = { "--no-ansi" };
+    jl_callJava("net/mamoe/mirai/console/terminal/MiraiConsoleTerminalLoader", "main", "([Ljava/lang/String;)V", miraiOptions, 1, NULL, NULL);
 }
 
 -(void)keyboardWillShow:(NSNotification *)noti {
@@ -72,8 +73,8 @@ void startMirai(void) {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         startMirai();
     });
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
         char buf[1024];
         while(1) {
             size_t sz = read(stdout_pipefd[0], buf, 1000);
@@ -93,7 +94,9 @@ void startMirai(void) {
 
 - (IBAction)onClick:(id)sender {
     if (_enterText.text) {
-        write(stdin_pipefd[1], [[_enterText.text stringByAppendingString:@"\n"] UTF8String], [_enterText.text length] + 1);
+        NSString* command = [_enterText.text stringByAppendingString:@"\n"];
+        [self->_mainText setText:[self->_mainText.text stringByAppendingString:command]];
+        write(stdin_pipefd[1], [command UTF8String], [command length]);
         [_enterText setText:@""];
     }
 
@@ -101,7 +104,9 @@ void startMirai(void) {
 
 - (IBAction)onReturnPressed:(UITextField *)sender {
     if (_enterText.text) {
-        write(stdin_pipefd[1], [[_enterText.text stringByAppendingString:@"\n"] UTF8String], [_enterText.text length] + 1);
+        NSString* command = [_enterText.text stringByAppendingString:@"\n"];
+        [self->_mainText setText:[self->_mainText.text stringByAppendingString:command]];
+        write(stdin_pipefd[1], [command UTF8String], [command length]);
         [_enterText setText:@""];
     }
 }
