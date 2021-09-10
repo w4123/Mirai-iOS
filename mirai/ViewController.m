@@ -10,6 +10,7 @@
 #include "javalauncher_api.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <dlfcn.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *mainText;
@@ -57,7 +58,7 @@ void startMirai(void) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     [_mainText setText:@"Mirai iOS 正在启动中，请耐心等待\n"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
